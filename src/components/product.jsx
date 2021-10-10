@@ -1,9 +1,20 @@
 import React from 'react'
 import { IconContext } from "react-icons";
-import { TiHeartOutline, } from "react-icons/ti";
+import { TiHeartOutline, TiHeart } from "react-icons/ti";
 import { Box, Image, Heading, Text } from '@chakra-ui/react'
+import { useDispatch } from 'react-redux'
+import { likeProduct } from 'features/product/product'
 
-export const Product = ({ image, name, price, like }) => {
+export const Product = ({ image, name, price, like, id }) => {
+	const dispatch = useDispatch()
+
+
+
+	const isLike = like ?
+		<TiHeartOutline onClick={() => dispatch(likeProduct({ id, isLike: false }))} /> :
+		<TiHeart onClick={() => dispatch(likeProduct({ id, isLike: true }))} />
+
+
 	return (
 		<>
 			<Box as='article' border='1xp red solid' w='100%' borderWidth="1px" borderRadius="1rem">
@@ -17,7 +28,7 @@ export const Product = ({ image, name, price, like }) => {
 						</Box>
 						<Box>
 							<IconContext.Provider value={{ style: { color: 'gray', fontSize: '1.5rem' } }}>
-								<TiHeartOutline />
+								{isLike}
 							</IconContext.Provider>
 						</Box>
 					</Box>

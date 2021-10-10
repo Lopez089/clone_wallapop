@@ -1,6 +1,6 @@
 import { createSlice } from '@reduxjs/toolkit'
 
-export const articles = [
+const initialState = [
     {
         name: 'article-1',
         id: '0',
@@ -30,54 +30,54 @@ export const articles = [
     },
     {
         name: 'article-1',
-        id: '0',
+        id: '4',
         image: 'https://picsum.photos/seed/picsum/200/300',
         price: '200€',
         like: true
     },
     {
         name: 'article-2',
-        id: '1',
+        id: '5',
         image: 'https://picsum.photos/seed/picsum/200/300',
         price: '200€',
         like: true
     },
     {
         name: 'article-3',
-        id: '2',
+        id: '6',
         image: 'https://picsum.photos/seed/picsum/200/300',
         price: '200€',
         like: true
     }, {
         name: 'article-4',
-        id: '3',
+        id: '7',
         image: 'https://picsum.photos/seed/picsum/200/300',
         price: '200€',
         like: true
     },
     {
         name: 'article-1',
-        id: '0',
+        id: '8',
         image: 'https://picsum.photos/seed/picsum/200/300',
         price: '200€',
         like: true
     },
     {
         name: 'article-2',
-        id: '1',
+        id: '9',
         image: 'https://picsum.photos/seed/picsum/200/300',
         price: '200€',
         like: true
     },
     {
         name: 'article-3',
-        id: '2',
+        id: '10',
         image: 'https://picsum.photos/seed/picsum/200/300',
         price: '200€',
         like: true
     }, {
         name: 'article-4',
-        id: '3',
+        id: '11',
         image: 'https://picsum.photos/seed/picsum/200/300',
         price: '200€',
         like: true
@@ -85,22 +85,22 @@ export const articles = [
 
 ]
 
-export const allproductSlice = createSlice({
+export const allProductSlice = createSlice({
     name: 'product',
-    initialState: {
-        product: articles,
-    },
+    initialState,
     reducers: {
-        increment: (state) => {
-            // Redux Toolkit allows us to write "mutating" logic in reducers. It
-            // doesn't actually mutate the state because it uses the Immer library,
-            // which detects changes to a "draft state" and produces a brand new
-            // immutable state based off those changes
-            return state.product
+        likeProduct: (state, action) => {
+
+            console.log(action);
+            const { id, isLike } = action.payload
+            const index = state.findIndex(e => e.id === id)
+
+            state[index].like = isLike
         }
+
     }
 })
 
-export const { increment } = allproductSlice.actions
+export const { likeProduct } = allProductSlice.actions
 
-export default allproductSlice.reducer
+export default allProductSlice.reducer
