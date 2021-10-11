@@ -4,7 +4,7 @@ import { Nav } from 'components/nav'
 
 export const LayoutPage = ({ children }) => {
 	return (
-		<Box h='100vh' pos='relative' >
+		<Box h='100%' position='relative'  >
 			<Box p='.5rem' botton={0}>
 				{children}
 			</Box >

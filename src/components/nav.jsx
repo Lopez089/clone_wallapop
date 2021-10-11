@@ -8,7 +8,7 @@ import {
 export const Nav = () => {
 	return (
 		<Box
-			pos="sticky"
+			pos={{ base: "fixed", sm: 'fixed', md: 'fixed', lg: "sticky" }}
 			w='100%'
 			bottom='0'
 			bg='white'
