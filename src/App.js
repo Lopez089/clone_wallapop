@@ -1,14 +1,14 @@
 import React from 'react'
 import { Layout } from 'layout/layout'
-import { ProductContainer } from 'container/productContainer'
-import { LayoutPage } from 'layout/layoutPage';
+import { RouterApp } from 'router/router';
+import { BrowserRouter as Router, } from "react-router-dom";
 
 function App() {
   return (
     <Layout >
-      <LayoutPage>
-        <ProductContainer />
-      </LayoutPage>
+      <Router>
+        <RouterApp></RouterApp>
+      </Router>
     </Layout>
   );
 }
