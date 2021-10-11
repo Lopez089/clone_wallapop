@@ -1,5 +1,8 @@
 import React from 'react'
+import { LayoutPage } from 'layout/layoutPage';
 
 export const Favorite = () => {
-    return 'favorito'
+    return (
+        <LayoutPage>favorite</LayoutPage>
+    )
 }

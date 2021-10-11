@@ -1,5 +1,8 @@
 import React from 'react'
+import { LayoutPage } from 'layout/layoutPage';
 
 export const You = () => {
-    return 'tu'
+    return (
+        <LayoutPage>you</LayoutPage>
+    )
 }

@@ -1,5 +1,8 @@
 import React from 'react'
+import { LayoutPage } from 'layout/layoutPage';
 
 export const Mailbox = () => {
-    return 'buzon'
+    return (
+        <LayoutPage>mailbox</LayoutPage>
+    )
 }
