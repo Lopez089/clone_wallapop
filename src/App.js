@@ -1,10 +1,15 @@
 import React from 'react'
 import { Layout } from 'layout/layout'
 import { ProductContainer } from 'container/productContainer'
+import { LayoutPage } from 'layout/layoutPage';
 
 function App() {
   return (
-    <Layout ><ProductContainer /></Layout>
+    <Layout >
+      <LayoutPage>
+        <ProductContainer />
+      </LayoutPage>
+    </Layout>
   );
 }
 
