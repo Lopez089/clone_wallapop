@@ -11,11 +11,11 @@ export const Nav = () => {
 			pos={{ base: "fixed", sm: 'fixed', md: 'fixed', lg: "sticky" }}
 			w='100%'
 			bottom='0'
-			bg='white'
+			bg='appColor.base'
 			display='flex'
 			justifyContent='space-around'
 			borderTop='1px solid'
-			borderColor='gray.200'
+			borderColor='appColor.secondary'
 			p='1rem'
 		>
 			<Link to="/">
