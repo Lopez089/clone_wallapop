@@ -9,8 +9,7 @@ export const Layout = ({ children }) => {
 				w={{ base: '100vw', sm: '100vw', md: '100vw', lg: '375px' }}
 				h={{ base: '100vh', sm: '100vh', md: '100vh', lg: '90vh', xl: '667px' }}
 				bg='white'
-				borderRadius={{ sm: '0', md: '0', lg: '2rem' }}
-				p='.5rem'
+				borderRadius={{ sm: '0', md: '0', lg: '1rem' }}
 				overflow='overlay'
 				css={{
 					'&::-webkit-scrollbar': {
