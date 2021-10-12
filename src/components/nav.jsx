@@ -1,9 +1,7 @@
 import React from 'react';
 import { Box, Text } from '@chakra-ui/react'
 import { BsHouse, BsHeart, BsPlusCircle, BsEnvelope, BsPerson } from "react-icons/bs";
-import {
-	Link
-} from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 export const Nav = () => {
 	return (
@@ -18,36 +16,36 @@ export const Nav = () => {
 			borderColor='appColor.secondary'
 			p='1rem'
 		>
-			<Link to="/">
+			<NavLink exact to="/" activeStyle={{ color: "#1f6987", fontWeight: "bold", }}>
 				<Box display='flex' flexDirection='column' justifyContent='center' alignItems='center' >
 					<BsHouse />
 					<Text fontSize="xs" paddingTop='.3rem'>Inicio</Text>
 				</Box>
-			</Link>
-			<Link to="/favorite">
+			</NavLink>
+			<NavLink to="/favorite" activeStyle={{ color: "#1f6987", fontWeight: "bold", }}>
 				<Box display='flex' flexDirection='column' justifyContent='center' alignItems='center'  >
 					<BsHeart />
 					<Text fontSize="xs" paddingTop='.3rem'>Favoritos</Text>
 				</Box>
-			</Link>
-			<Link to="/upload">
+			</NavLink>
+			<NavLink to="/upload" activeStyle={{ color: "#1f6987", fontWeight: "bold", }}>
 				<Box display='flex' flexDirection='column' justifyContent='center' alignItems='center' >
 					<BsPlusCircle />
 					<Text fontSize="xs" paddingTop='.3rem'>Súbelo</Text>
 				</Box>
-			</Link>
-			<Link to="/mailbox">
+			</NavLink>
+			<NavLink to="/mailbox" activeStyle={{ color: "#1f6987", fontWeight: "bold", }}>
 				<Box display='flex' flexDirection='column' justifyContent='center' alignItems='center' >
 					<BsEnvelope />
 					<Text fontSize="xs" paddingTop='.3rem'>Buzon</Text>
 				</Box>
-			</Link>
-			<Link to="/you">
+			</NavLink>
+			<NavLink to="/you" activeStyle={{ color: "#1f6987", fontWeight: "bold", }}>
 				<Box display='flex' flexDirection='column' justifyContent='center' alignItems='center' >
 					<BsPerson />
 					<Text fontSize="xs" paddingTop='.3rem'>Tú</Text>
 				</Box>
-			</Link>
+			</NavLink>
 		</Box >
 	)
 }
