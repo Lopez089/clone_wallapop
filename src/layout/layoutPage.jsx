@@ -1,6 +1,6 @@
 import React from 'react'
 import { Box, } from '@chakra-ui/react'
-import { Nav } from 'components/nav'
+import { NavContainer } from 'container/navContainer'
 
 export const LayoutPage = ({ children }) => {
 	return (
@@ -8,7 +8,7 @@ export const LayoutPage = ({ children }) => {
 			<Box p='.5rem' minH='100%'>
 				{children}
 			</Box >
-			<Nav />
+			<NavContainer />
 		</Box>
 	)
 }
