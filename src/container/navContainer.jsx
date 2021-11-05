@@ -18,6 +18,7 @@ export const NavContainer = () => {
 			borderTop='1px solid'
 			borderColor='appColor.secondary'
 			p='1rem'
+			zIndex='9'
 		>
 			{
 				links.map(link => (
